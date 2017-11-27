@@ -270,118 +270,219 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 
 <hr/>
 
+<p>
+  <strong>Requirements:</strong>
+Data Carpentry's teaching is hands-on, so participants are encouraged to bring in and use their own laptops to insure the proper setup of tools for an efficient workflow once you leave the workshop.  (We will provide instructions on setting up the required software several days in advance)
+<em> There are no pre-requisites, and we will assume no prior knowledge about the tools.</em> 
+</p>
 
-<!--
-  SETUP
 
-  Delete irrelevant sections from the setup instructions.  Each
-  section is inside a 'div' without any classes to make the beginning
-  and end easier to find.
+  <strong>Contact</strong>:
+  Please email
+  {% if page.contact %}
+    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
+  {% else %}
+    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
+  {% endif %}
+  for questions and information not covered here.
+</p>
 
-  This is the other place where people frequently make mistakes, so
-  please preview your site before committing, and make sure to run
-  'tools/check' as well.
--->
+<h2>Setup</h2>
 
-<h2 id="setup"> Software Setup</h2>
+<p> To participate in a Data Carpentry workshop, you will need working copies of the software described below. Please 
+make sure to install everything and try opening it to make sure it works <em>before</em> the start of your workshop. If 
+you run into any problems, please feel free to email the instructor or arrive early to your workshop on the first day.
 
-<h3 id="setup"> OpenRefine</h3>
+Participants should bring and use their own laptops to insure the proper setup of 
+tools for an efficient workflow once you leave the workshop.
+</p>
 
 <p>
   We maintain a list of common issues that occur during installation as a reference for instructors
   that may be useful on the
-  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
+  <a href = "https://github.com/swcarpentry/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
 
-    <div class="row">
-    <div class="col-md-6">
-      <h4 id="or-win">Windows</h4>
-        <ol>
-            <li>Go to the OpenRefine <a href="http://openrefine.org/download.html">download
-            page</a>
-            <li>Click on <i>Windows kit</i> to download the install file
-              <li>To use it, unzip, and double-click on openrefine.exe (if you're having issues
-with openrefine.exe try refine.bat instead)
-<li>OpenRefine will then open in your web browser.
-<li>If it doesn't open automatically, open a web broswer after you've started the program and go to the URL <code>http://localhost:3333</code> and you should see OpenRefine.
-</ol>
-</div>
-    <div class="col-md-6">
-      <h4 id="or-mac">Mac</h4>
-        <ol>
-            <li>Go to the OpenRefine <a href="http://openrefine.org/download.html">download
-            page</a>
-            <li>Click on <i>Mac kit</i> to download the install file
-            <li>To use it, unzip, drag the openrefine icon to the Applications folder, and then double click on the icon.
-            <li>OpenRefine will then open in your web browser.
-            <li>If it doesn't open automatically, open a web broswer after you've started the program and go to the URL <code>http://localhost:3333</code> and you should see OpenRefine.
-          </ol>
-      </div>
-    <div class="col-md-6">
-      <h4 id="or-linux">Linux</h4>
-        <ol>
-            <li>Go to the OpenRefine <a href="http://openrefine.org/download.html">download
-            page</a>
-            <li>Click on <i>Linux kit</i> to download the install file
-            <li>To use it, unzip, then type ./refine in a terminal to start
-            <li>OpenRefine will then open in your web browser.
-            <li>If it doesn't open automatically, open a web broswer after you've started the program and go to the URL <code>http://localhost:3333</code> and you should see OpenRefine.
-          </ol>
-</div>
-</div>
-<p>OpenRefine may require you to install Java, please follow the instructions it provides to do so.</p>
-</div>
+<div id="spreadsheet"> <!-- Start of 'spreadsheet' section. -->
 
+<h3>A spreadsheet program</h3>
 
-<div id="r"> <!-- Start of 'R' section. -->
-  <h3>R</h3>
-
-  <p>
-    <a href="http://www.r-project.org">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
-    statistical analysis. To interact with R, we use
-    <a href="http://www.rstudio.com/">RStudio</a>.
+<p> For this workshop you will need a spreadsheet program. Many people already have Microsoft Excel installed, and if you do, you're set! 
+If you need a spreadsheet program, there are a few other options, like OpenOffice and LibreOffice. Install instructions for LibreOffice, which is free and open source, are here.
   </p>
 
   <div class="row">
-    <div class="col-md-6">
-      <h4 id="r-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>
+    <div class="col-md-4">
+      <h4 id="spreadsheet-windows">Windows</h4>
+      <ol>
+        <li>Download the LibreOffice <a href="https://www.libreoffice.org/download/libreoffice-fresh/">installer</a>.</li>
+        <li>Double click to install</li>
+        <li>Double click on icon to open.</li>
+      </ol>
+      </div>
+    <div class="col-md-4">
+        <h4 id="spreadsheet-mac">Mac OS X</h4>
+      <ol>
+        <li>Download the LibreOffice <a href="https://www.libreoffice.org/download/libreoffice-fresh/">installer</a>.</li>
+        <li>Double click to install</li>
+        <li>Double click on icon to open.</li>
+      </ol>
+    </div>
+    <div class="col-md-4">
+      <h4 id="openrefine-linux">Linux</h4>
+      <ol>
+                <li>Download the LibreOffice <a href="https://www.libreoffice.org/download/libreoffice-fresh/">installer</a>.</li>
+        <li>Double click to install</li>
+        <li>Double click on icon to open.</li>
+      </ol>
+      </div>
+  </div>
+</div> <!-- End of 'spreadsheet' section. -->
+
+<div id="openrefine"> <!-- Start of 'openrefine' section. -->
+  <h3>OpenRefine</h3>
+
+  <p>
+    OpenRefine (previously Google Refine) is a tool for data cleaning that runs through a web browser, and any browser - Safari, Firefox, Chrome, 
+      Explorer - should work fine. You will need to download OpenRefine and install it, and when you open it, it will run through the browser, but 
+      you don't need an internet connection, and the data will all be stored on your computer.
+  </p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h4 id="openrefine-windows">Windows</h4>
+      <ol>
+        <li>Download OpenRefine Windows kit <a href="http://openrefine.org/download.html">installer</a>.</li>
+        <li>To use it, unzip, and double-click on openrefine.exe (if you're having issues with openrefine.exe try refine.bat instead)</li>
+        <li>OpenRefine will then open in your web browser.</li>
+        <li>If it doesn't open automatically, open a web broswer after you've started the program and go to the URL http://localhost:3333 and you should see OpenRefine.</li>
+      </ol>
+      </div>
+    <div class="col-md-4">
+        <h4 id="openrefine-mac">Mac OS X</h4>
+      <ol>
+        <li>Download OpenRefine Mac kit <a href="http://openrefine.org/download.html">installer</a>.</li>
+        <li>Open the downloaded .dmg file</li>        
+        <li>Drag the icon in to the Applications folder</li>
+        <li>Double click on the icon and Google Refine will then open in your web browser.</li>
+        <li>If it doesn't open automatically, open a web broswer after you've started the program and go to the URL http://localhost:3333 and you should see OpenRefine.</li>
+      </ol>
+    </div>
+    <div class="col-md-4">
+      <h4 id="openrefine-linux">Linux</h4>
+      <ol>
+        <li>Download OpenRefine Linux kit <a href="http://openrefine.org/download.html">installer</a>.</li>
+        <li>To use it, extract, and type ./refine</li>
+        <li>OpenRefine will then open in your web browser.</li>
+        <li>If it doesn't open automatically, open a web broswer after you've started the program and go to the URL http://localhost:3333 and you should see OpenRefine.</li>
+      </ol>
+      </div>
+  </div>
+</div> <!-- End of 'openrefine' section. -->
+
+<div id="git"> <!-- Start of 'Git' section. GitHub browser compatability
+           is given at https://help.github.com/articles/supported-browsers/-->
+  <h3>Git</h3>
+  <p>
+    Git is a version control system that lets you track who made changes
+    to what when and has options for easily updating a shared or public
+    version of your code
+    on <a href="https://github.com/">github.com</a>. You will need a
+    <a href="https://help.github.com/articles/supported-browsers/">supported</a>
+    web browser (current versions of Chrome, Firefox or Safari,
+    or Internet Explorer version 9 or above).
+  </p>
+  <p>
+    You will need an account at <a href="https://github.com/">github.com</a>
+    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
+    you to create a GitHub account if you don't have one already.
+    Please consider what personal information you'd like to reveal. For
+    example, you may want to review these
+    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
+    for keeping your email address private</a> provided at GitHub.
+  </p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h4 id="git-windows">Windows</h4>
       <p>
-        Install R by downloading and running
-        <a href="http://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-        from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-        Note that if you have separate user and admin accounts, you should run the 
-        installers as administrator (right-click on .exe file and select "Run as 
-        administrator" instead of double-clicking). Otherwise problems may occur later, 
-        for example when installing R packages.
+        We're going to be using GitHub Desktop to work with Git in this workshop. 
+        <a href="https://central.github.com/deployments/desktop/desktop/latest/win32 ">Download GitHub Desktop</a>
       </p>
     </div>
-    <div class="col-md-6">
-      <h4 id="r-macosx">Mac OS X</h4>
-      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a>
+    <div class="col-md-4">
+      <h4 id="git-macosx">Mac OS X</h4>
       <p>
-        Install R by downloading and running
-        <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-        from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+        We're going to be using GitHub Desktop to work with Git in this workshop. 
+        <a href="https://central.github.com/deployments/desktop/desktop/latest/darwin ">Download GitHub Desktop</a>
       </p>
     </div>
-    <div class="col-md-6">
-      <h4 id="r-linux">Linux</h4>
+    <div class="col-md-4">
+      <h4 id="git-linux">Linux</h4>
       <p>
-        You can download the binary files for your distribution
-        from <a href="http://cran.r-project.org/index.html">CRAN</a>. Or
-        you can use your package manager (e.g. for Debian/Ubuntu
-        run <code>sudo apt-get install r-base</code> and for Fedora run
-        <code>sudo yum install R</code>).  Also, please install the
-        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+        We're going to be using GitHub Desktop to work with Git in this workshop. 
+        Unfortunatly Linux support for for GitHub Desktop desktop is still in development.
+        This unofficial release seems to be working for most people
+        <a href="https://github.com/gengjiawen/desktop/releases ">Download GitHub Desktop</a>
       </p>
     </div>
   </div>
+</div> <!-- End of 'Git' section. -->
+
+<div id="R"> <!-- Start of 'R' section. -->
+
+    <h3>R and RStudio</h3>
+  <p> In the workshop, we will use RStudio. RStudio is a nice interface to the programming language R. 
+      To use RStudio, you need to install both R and RStudio.
+  
+  <div class="row">
+    <div class="col-md-4">
+      <h4 id="python-windows">Windows</h4>
+        <ol>      
+            <li>Download R from <a href="http://cran.r-project.org/bin/windows/base/release.htm">here</a>
+            <li>Run the .exe file that was just downloaded
+            <li>Go to the <a href="http://www.rstudio.com/ide/download/desktop">RStudio Download page</a>
+            <li>Under <i>Installers</i> select <b>RStudio x.yy.zzzz - Windows XP/Vista/7/8</b>
+            <li>Double click the file to install it
+            <li>Once it's installed, open RStudio to make sure it works and you don't get any error messages.
+        </ol>
+    </div>
+    
+    <div class="col-md-4">
+      <h4 id="python-macosx">Mac OS X</h4>
+      <ol>
+        <li>Go to <a href=http://cran.r-project.org>CRAN</a> and click on <i>Download R for (Mac) OS X</i>
+        <li>Select the .pkg file for the version of OS X that you have and the file will download.
+        <li>Double click on the file that was downloaded and R will install
+        <li>Go to the <a href="http://www.rstudio.com/ide/download/desktop">RStudio Download page</a>
+        <li>Under <i>Installers</i> select <b>RStudio <em>x.yy.zzz</em> - Mac OS X 10.6+ (64-bit)</b> to download it.
+        <li>Once it's downloaded, double click the file to install it
+        <li>Once it's installed, open RStudio to make sure it works and you don't get any error messages.
+      </ol>
+    </div>
+      
+    <div class="col-md-4">
+      <h4 id="python-linux">Linux</h4>
+      <ol>
+         <li>Follow the instructions for your distribution from <a href="https://cloud.r-project.org/bin/linux/">CRAN</a>. 
+             For most distributions, you can use your package manager (e.g. for Debian/Ubuntu run <code>sudo apt-get install 
+             r-base</code>, and for Fedora run <code>sudo yum install R</code>) but make sure that you have at least R 3.2.2 
+             (as pre-packaged versions might be out of date).
+         <li>To install RStudio, go to the <a href="http://www.rstudio.com/ide/download/desktop">RStudio Download page</a>
+         <li>Under <i>Installers</i> select the version for your distribution.
+         <li>Once it's downloaded, double click the file to install it (or <code>sudo dpkg -i rstudio-x.yy.zzz-amd64.deb</code> 
+             at the terminal).
+         <li>Once it's installed, open RStudio to make sure it works and you don't get any error messages.
+      </ol>
+    </div>
+  </div>
+<!--
+  <p>
+  Once you are done installing the software listed above,
+  please go to <a href="setup/index.html">this page</a>,
+  which has instructions on how to test that everything was installed correctly.
+  </p>
+-->
 </div> <!-- End of 'R' section. -->
 
 
